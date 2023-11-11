@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <form id="form">
+    <body>
+        <form id="form">
 
-        <label>
-            Nome da Task:
-            <input type="text" id="inp-task-name" value="default"/>
-        </label>
-        <label>
-            Delay da Task em segundos:
-            <input type="number" id="inp-task-delay" value="3"/>
-        </label>
-        <label>
-            Texto da Task após resolver:
-            <input type="text" id="inp-task-text" value="default_text"/>
-        </label>
-        <button type="submit" id="btn-submit">Add Task</button>
-    </form>
+            <label>
+                Nome da Task:
+                <input type="text" id="inp-task-name" value="default"/>
+            </label>
+            <label>
+                Delay da Task em segundos:
+                <input type="number" id="inp-task-delay" value="3"/>
+            </label>
+            <label>
+                Texto da Task após resolver:
+                <input type="text" id="inp-task-text" value="default_text"/>
+            </label>
+            <button type="submit" id="btn-submit">Add Task</button>
+        </form>
 
-    <main id="app">
-        <section id="task-container" class="task-div">
-            <h4>Fila de Tasks</h4>
-            <div id="task-container-queue">
-            </div>
-            <h4>Próxima a ser executada</h4>
-            <div id="task-container-next">
-            </div>
+        <main id="app">
+
+            <section id="task-container" class="task-div">
+                <h4>Fila de Tasks</h4>
+                <div id="task-container-queue">
+                </div>
+                <h4>Em execução</h4>
+                <div id="task-container-next">
+                </div>
                 <div class="outer-timer">
                     <div class="inner-timer"></div>
                 </div>
-        </section>
-        <section id="task-messages">
-        </section>
-    </main>
+            </section>
+
+            <section id="task-messages">
+            </section>
+
+        </main>
         <button id="btn-queue-next">Executar próxima Task</button>
         <button id="btn-queue-submit">Executar fila de Tasks</button>
-    <script src="async-queue.js"></script>
-</body>
+        <script src="async-queue.js"></script>
+    </body>
 
 </html>

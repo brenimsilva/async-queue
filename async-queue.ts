@@ -46,7 +46,7 @@ class AsyncQueue {
         elements.taskContainer.innerHTML = "";
         this.queue.forEach((t) => {
             const p = document.createElement("p");
-            p.innerText = `${t.taskName}()`
+            p.innerText = `${t.taskName.replace(" ", "_")}()`
             elements.taskContainer.appendChild(p);
         })
     }
